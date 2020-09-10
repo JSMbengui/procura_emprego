@@ -1,0 +1,48 @@
+{
+  "author": "JSMbengui",
+  "license": "ISC",
+  "name": "backend-secosta-project",
+  "version": "0.0.1",
+  "engines": {
+    "node": "12.x"
+  },
+  "description": "This is the backend for secosta project",
+  "main": "server.js",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "commitizen": "^4.1.2",
+    "cz-conventional-changelog": "^3.2.0",
+    "husky": "^4.2.5",
+    "jest": "^26.0.1",
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "^5.1.0",
+    "bcrypt": "^4.0.1",
+    "core-js": "3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.15",
+    "multer": "^1.4.2"
+  },
+  "scripts": {
+    "commit": "git cz",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js --ignore __tests__",
+    "test": "jest --detectOpenHandles"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
